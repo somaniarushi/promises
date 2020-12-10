@@ -2,6 +2,18 @@
 class Promise {
     constructor(executor) {
         this.executor = executor;
+        this.outcome = null;
+
+        this.resolve = this.resolve.bind(this);
+        this.reject = this.reject.bind(this);
+    }
+
+    resolve(value) {
+        this.outcome = {status: 'fulfilled', value: value};
+    }
+
+    reject(error) {
+        this.outcome = {status: 'rejected', reason: error};
     }
 }
 
