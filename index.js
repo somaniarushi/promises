@@ -3,6 +3,7 @@ class Promise {
     constructor(executor) {
         this.executor = executor;
         this.outcome = null;
+        this.pending = true;
 
         this.resolve = this.resolve.bind(this);
         this.reject = this.reject.bind(this);
@@ -10,10 +11,12 @@ class Promise {
 
     resolve(value) {
         this.outcome = {status: 'fulfilled', value: value};
+        this.pending = false;
     }
 
     reject(error) {
         this.outcome = {status: 'rejected', reason: error};
+        this.pending = false;
     }
 }
 
