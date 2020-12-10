@@ -1,5 +1,8 @@
 /** Shadowing the Promise class to create my own implementation. */
 class Promise {
+    constructor(executor) {
+        this.executor = executor;
+    }
 }
 
 /** Testing */
