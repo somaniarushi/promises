@@ -1,7 +1,7 @@
 # Creating Promises in Javascript
 A Minified Implementation of The Promise Class 🤞
 
-This Promise class implementation includes Promise object creation and the `then` function. It allows allows for `then` chaining. I wrote about this implementation [here](https://amks.me/blog/promises),
+This Promise class implementation includes Promise object creation and the `then` function. It allows allows for `then` chaining. I wrote about this implementation [here](https://amks.me/blog/promises).
 
 
 ## The Flaws Of This Implementation
